@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "client-data-sender": {
+      "commandName": "Project"
+    },
+    "dapr": {
+      "commandName": "Executable",
+      "executablePath": "C:\\dapr\\dapr.exe",
+      "commandLineArgs": "run --components-path ./components/ --app-id client-data-sender dotnet run",
+      "workingDirectory": "D:\\WORK\\Projects\\DAPR\\microservices-example\\microservices-example\\client-data-sender"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+name: microservices-example
+extensions:
+- name: dapr
+  log-level: debug
+  components-path: "./components/"
+services:
+- name: data-gateway
+  project: data-gateway/data-gateway.csproj
+  bindings:
+    - port: 5019
+      protocol: http
+- name: data-package-service
+  project: data-package-service/data-package-service.csproj
+  bindings:
+    - port: 5081
+      protocol: http
+- name: client-data-sender
+  project: client-data-sender/client-data-sender.csproj
+  bindings:
+    - port: 5019
