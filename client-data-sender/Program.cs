@@ -1,13 +1,13 @@
 ﻿using Dapr.Client;
 
-const string storeName = "state-client-data-sender-store";
-const string key = "data";
+string storeName = Environment.GetEnvironmentVariable("store-name")!;
+string storeKey = Environment.GetEnvironmentVariable("store-key")!;
 
 CancellationTokenSource source = new CancellationTokenSource();
 CancellationToken cancellationToken = source.Token;
 
 var daprClient = new DaprClientBuilder().Build();
-var data = await daprClient.GetStateAsync<int>(storeName, key);
+var data = await daprClient.GetStateAsync<int>(storeName, storeKey);
 
 while (true)
 {
@@ -23,7 +23,7 @@ while (true)
         Console.WriteLine(exception.Message);
     }
 
-    await daprClient.SaveStateAsync(storeName, key, data);
+    await daprClient.SaveStateAsync(storeName, storeKey, data);
     await Task.Delay(1000);
 
     data++;

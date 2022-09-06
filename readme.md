@@ -96,7 +96,7 @@ From the solution folder, running:
 
 The command runs all microservices configured in the yaml file.
 
-After that, run client-data-receiver manually in order to check if the data arrives from the cycle.
+After that, run *client-data-receiver* manually in order to check if the data arrives from the cycle.
 
 *Note*: in the *tye.yaml*, see the port for *client-data-sender*. It is the same of *data-gateway*.
 

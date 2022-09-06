@@ -18,3 +18,8 @@ services:
   project: client-data-sender/client-data-sender.csproj
   bindings:
     - port: 5019
+  env:
+  - name: store-name
+    value: state-client-data-sender-store
+  - name: store-key
+    value: data
