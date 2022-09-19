@@ -86,6 +86,14 @@ Under the folder project, running:
 
 ## client-data-receiver
 
+The project is a .net core console application. How it works:
+
+- It receives events with a payload data by the *data-package-service*.
+
+From the project folder, running:
+
+	dapr run --app-id data-package-service dotnet run
+
 # Tye
 
 Tye is an microservices orchestrator for developing mode. See tye.yaml to check the microservices configuration.
@@ -100,16 +108,24 @@ After that, run *client-data-receiver* manually in order to check if the data ar
 
 *Note*: in the *tye.yaml*, see the port for *client-data-sender*. It is the same of *data-gateway*.
 
+## docker-compose
+
 # References
 
-## State Management
+## Dapr
 
-## Service Invocation
+### State Management
+
+### Service Invocation
 
 - <https://docs.dapr.io/developing-applications/building-blocks/service-invocation/howto-invoke-discover-services/>
 
-## PubSub
+### PubSub
 
 - <https://docs.dapr.io/developing-applications/building-blocks/pubsub/howto-publish-subscribe/>
 - <https://yourazurecoach.com/2019/12/27/exploring-dapr-pub-sub-part-2-asp-net-core-integration/>
 - <https://medium.com/@__hungrywolf/microservices-pub-sub-with-dapr-docker-compose-and-net-1e5be05ada1a>
+
+## docker-compose
+
+- <https://medium.com/@__hungrywolf/microservices-service-to-service-to-invocation-with-dapr-and-net-22f2e0be2779>

@@ -22,7 +22,14 @@
       "commandName": "Executable",
       "executablePath": "C:\\dapr\\dapr.exe",
       "commandLineArgs": "run --app-id data-gateway --app-port 5019 --dapr-http-port 3602 dotnet run",
-      "workingDirectory": "D:\\WORK\\Projects\\DAPR\\microservices-example\\microservices-example\\data-gateway"
+      "workingDirectory": "D:\\WORK\\Projects\\DAPR\\microservices-example\\data-gateway"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "publishAllPorts": true,
+      "httpPort": 5019
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",

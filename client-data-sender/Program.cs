@@ -1,7 +1,7 @@
 ﻿using Dapr.Client;
 
-string storeName = Environment.GetEnvironmentVariable("store-name")!;
-string storeKey = Environment.GetEnvironmentVariable("store-key")!;
+string storeName = Environment.GetEnvironmentVariable("store_name")!;
+string storeKey = Environment.GetEnvironmentVariable("store_key")!;
 
 CancellationTokenSource source = new CancellationTokenSource();
 CancellationToken cancellationToken = source.Token;

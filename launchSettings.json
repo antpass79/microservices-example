@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "client-data-sender": "DoNotStart",
+        "data-gateway": "StartDebugging",
+        "data-package-service": "StartDebugging"
+      }
+    }
+  }
+}

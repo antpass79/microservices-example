@@ -19,7 +19,7 @@ services:
   bindings:
     - port: 5019
   env:
-  - name: store-name
+  - name: store_name
     value: state-client-data-sender-store
-  - name: store-key
+  - name: store_key
     value: data

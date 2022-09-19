@@ -12,6 +12,15 @@ public class SubscribeHostedService : ControllerBase
         _hubContext = hubContext;
     }
 
+    [HttpGet]
+    public Task<string> Get()
+    {
+        var message = $"data-package-service: {Guid.NewGuid()}";
+
+        Console.WriteLine(message);
+        return Task.FromResult(message);
+    }
+
     [Topic("data-pubsub", "counters")]
     [HttpPost]
     [Route("data-pubsub")]

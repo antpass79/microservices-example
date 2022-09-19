@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  data-gateway:
+    image: ${DOCKER_REGISTRY-}datagateway
+    build:
+      context: .
+      dockerfile: data-gateway/Dockerfile
+
+  data-package-service:
+    image: ${DOCKER_REGISTRY-}datapackageservice
+    build:
+      context: .
+      dockerfile: data-package-service/Dockerfile
+
+  client-data-sender:
+    image: ${DOCKER_REGISTRY-}clientdatasender
+    build:
+      context: .
+      dockerfile: client-data-sender/Dockerfile
+    environment:
+      - store_name=state-client-data-sender-store
+      - store_key=data

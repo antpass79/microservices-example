@@ -18,6 +18,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data-gateway", "data-gatewa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data-package-service", "data-package-service\data-package-service.csproj", "{88BC1D18-9073-47C0-B4D1-B685559CE593}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3905C3D3-AC21-4389-B266-00C9BA7781BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{0CB00955-485C-4F70-BE4E-9509A2369830}"
+	ProjectSection(SolutionItems) = preProject
+		components\pubsub.yaml = components\pubsub.yaml
+		components\statestore.yaml = components\statestore.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +48,10 @@ Global
 		{88BC1D18-9073-47C0-B4D1-B685559CE593}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88BC1D18-9073-47C0-B4D1-B685559CE593}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88BC1D18-9073-47C0-B4D1-B685559CE593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3905C3D3-AC21-4389-B266-00C9BA7781BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3905C3D3-AC21-4389-B266-00C9BA7781BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3905C3D3-AC21-4389-B266-00C9BA7781BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3905C3D3-AC21-4389-B266-00C9BA7781BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

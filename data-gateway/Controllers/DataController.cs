@@ -15,12 +15,12 @@ namespace data_gateway.Controllers
         }
 
         [HttpGet]
-        public Task<Guid> Get()
+        public Task<string> Get()
         {
-            var guid = Guid.NewGuid();
+            var message = $"data-gateway: {Guid.NewGuid()}";
 
-            Console.WriteLine(guid);
-            return Task.FromResult(guid);
+            Console.WriteLine(message);
+            return Task.FromResult(message);
         }
 
         [HttpPost]

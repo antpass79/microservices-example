@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  data-gateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5019:80"
+
+  client-data-sender:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5019"
+
+  data-package-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5081:80"
+
